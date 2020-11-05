@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+*{
+    font-family: "Montserrat", sans-serif;
+    padding:0px;
+    margin:0px;
+    box-sizing: border-box;
+}
+.recipe-navbar{
+    width: 100%;
+    height: 4.5rem;
+    background-color: #828282;
+}
+.search-bar{
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-color: chocolate;
+    margin: auto;
+    /* line-height: 1.5; */
+    /* display: flex; */
+  }
+  
+  h2 {
+    color: #195C76;
+    font-size: 1.3rem;
+  }
+  
+  .flex-grid {/*side bar text on images*/
+    color: white;
+    display: flex;
+    margin: auto;    
+  }
+  .top-image-sidebar{
+    background-image: url('https://images.unsplash.com/photo-1546833160-1ae25ca1a6d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1287&q=80');
+    height: 200px;
+    width: auto; 
+    background-size: cover;
+    /* position: relative; */
+  }
+  .category-text{
+    background-color: white;
+    border: 1px solid #D1CCCC;
+    padding:0 65px 0;
+    /* position: absolute; */
+    z-index: 1;
+   
+    display: inline;
+    margin-left:auto;
+    margin-right:auto;
+    border-radius: 15px;
+  }
+  .images-container{
+    margin-top:40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .single-box-beef,.single-box-fish,.single-box-vegetables,.single-box-fruit,.single-box-pork,.single-box-chicken{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 160px;
+    height: 160px;
+    height: 150px;
+    width: 150px; 
+    background-size: cover;
+    border-radius: 15px;
+    margin: 6px;
+    position: relative;
+  }
+  .single-box-beef{background-image: url('https://images.unsplash.com/photo-1546833160-1ae25ca1a6d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1287&q=80');}
+  .single-box-fish{background-image: url('https://images.unsplash.com/photo-1575053516499-bf3ab5bf59e4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=675&q=80');}
+  .single-box-vegetables{background-image: url('https://images.unsplash.com/photo-1546069901-d5bfd2cbfb1f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80');}
+  .single-box-fruit{background-image: url('https://images.unsplash.com/photo-1544510806-07b18f692386?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1346&q=80');}
+  .single-box-pork{background-image: url('https://images.unsplash.com/photo-1567276789707-9903c74d98f4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');}
+  .single-box-chicken{background-image: url('https://images.unsplash.com/photo-1585325701172-fcb7d019242d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=674&q=80');}
+
+  .header-text{
+    background-color: rgba(0, 0, 0, 0.5);    
+    width: 150px;
+    text-align: center;
+  }
+  .img-area:hover{
+    cursor: pointer;
+  }
+  .sidebar-box-area {
+    flex: 1;
+    background-color: white;
+  }   
+  .main {
+    flex: 3;
+    background-color:white;
+    border-left: 1px solid #D1CCCC;
+    /* margin-left:0.5rem; */
+    /* margin-right:0.5rem; */
+    /* padding: 1rem; */
+    height:100vh;
+    width: 100vh;
+  }
+
