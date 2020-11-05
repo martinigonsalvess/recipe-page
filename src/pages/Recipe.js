@@ -10,10 +10,10 @@ const Recipe = ({recipe}) => {
 
     return (
         <div className="recipe">
-        <a href={url} target="_self" rel="noopener noreferrer"> <h2>{label}</h2></a>
+        <a href={url} target="_blank" rel="noopener noreferrer"> <h2>{label}</h2></a>
             <img src={image} alt={label}/>
             
-           {/*  <a href={url} target="_blank" rel="noopener noreferrer">URL</a> */}
+            {/* <a href={url} target="_blank" rel="noopener noreferrer">URL</a> */}
 
             <button onClick={ ()=> setShow(!show)}>Ingredients</button>
             {show &&<RecipeDetails ingredients={ingredients}/>}

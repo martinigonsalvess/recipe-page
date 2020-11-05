@@ -4,17 +4,16 @@ import ShowRecipes from './ShowRecipes';
 import Axios from 'axios';
 
 function RecipePage() {
-    const [query, setQuery] = useState("fish");
+    const [query, setQuery] = useState("");
     const [recipes, setRecipes] = useState([]);
 
 
-    const getBeef = () => {
+    const getRecipes = () => {
         Axios.get(`https://api.edamam.com/search?q=${query}&app_id=439d148a&app_key=656b9f2c04daa032243be7bf3454c466`)
             .then(resp => setRecipes(resp.data.hits))
-            // .then(console.log(recipes))
 
     };
-    useEffect(() => { getBeef() }, [])
+    useEffect(() => { getRecipes() }, [query])
     console.log(recipes)
     return (
         <>
@@ -24,41 +23,36 @@ function RecipePage() {
                         <div className="top-image-sidebar"></div>
                         <h2 className="category-text">Category</h2>
                         <div className="images-container">
-                            <div className="single-box-beef">
+                            <div className="single-box-beef" onClick={()=> setQuery("beef")}>
                                 <div className="img-area"></div>
                                 <div className="img-text"></div>
-                                {/* <button onClick={()=>e.target.value.data}> */}
-                                <span className="header-text"><strong>Beef</strong></span>
-                                {/* </button> */}
-                            </div>
-                            {/*you should wrap the category between a button tag. 
-                                            onClick= make the api call depending 
-                                            on the category and charge the state  */}
+                                <span className="header-text"><strong>Beef</strong></span>                                
+                            </div>                       
 
-                            <div className="single-box-fish">
+                            <div className="single-box-fish" onClick={()=> setQuery("fish")}>
                                 <div className="img-area"></div>
                                 <div className="img-text"></div>
                                 <span className="header-text"><strong>Fish</strong></span>
                             </div>
-                            <div className="single-box-vegetables">
+                            <div className="single-box-vegetables" onClick={() => setQuery("vegetables")}>
                                 <div className="img-area"></div>
                                 <div className="img-text"></div>
                                 <span className="header-text"><strong>Vegetables</strong></span>
 
                             </div>
-                            <div className="single-box-fruit">
+                            <div className="single-box-fruit" onClick={() => setQuery("fruit")}>
                                 <div className="img-area"></div>
                                 <div className="img-text"></div>
                                 <span className="header-text"><strong>Fruit</strong></span>
 
                             </div>
-                            <div className="single-box-pork">
+                            <div className="single-box-pork" onClick={() => setQuery("pork")}>
                                 <div className="img-area"></div>
                                 <div className="img-text"></div>
                                 <span className="header-text"><strong>Pork</strong></span>
 
                             </div>
-                            <div className="single-box-chicken">
+                            <div className="single-box-chicken" onClick={() => setQuery("chicken")}>
                                 <div className="img-area"></div>
                                 <div className="img-text"></div>
                                 <span className="header-text"><strong>Chicken</strong></span>
@@ -70,15 +64,13 @@ function RecipePage() {
                     </aside>
 
 
-                    <div className="main">
+                    {/* <div className="main"> */}
+                    <div className="recipes">
                         {/* map to the state and display the ShowRecipes component and pass the state to him with the spread operator
-                        <ul>
-                             {beef.map(results => <li>{results.label}</li>)}
-                        </ul> */ }
+                       */ }
 
                         {recipes.map(result => <ShowRecipes result={result} />)}                        
 
-                        <div className="show-recipes"></div>
 
 
 

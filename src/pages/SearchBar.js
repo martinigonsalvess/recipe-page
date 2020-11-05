@@ -3,6 +3,7 @@ import './SearchBar.css';
 import Alert from './Alert';
 import Recipe from './Recipe';
 import React, { useState } from 'react';
+import ShowRecipes from './ShowRecipes';
 
 function SearchBar(){
 /*API part */
@@ -56,12 +57,17 @@ const onSubmit =(e)=>{
         <input type="submit" value="search"/>
       </form>
 
-
       <div className="recipes">
+        {recipes !== [] && recipes.map(result =>
+          <ShowRecipes result={result} />
+          )}
+      </div>   
+
+      {/* <div className="recipes">
         {recipes !== [] && recipes.map(recipe =>
           <Recipe recipe={recipe} />
           )}
-      </div>   
+      </div>    */}
 
 
       </div>

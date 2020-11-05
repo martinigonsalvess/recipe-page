@@ -1,22 +1,15 @@
-import RecipePage from './RecipePage';
-import SearchBar from './SearchBar';
+import Recipe from './Recipe';
+import './RecipePage.css';
 
 
-
-function ShowRecipes(recipe){
-    console.log(recipe.recipe)
+function ShowRecipes({ result}){
+    console.log(result)
     return(
-        <>
-        
-
-        <h1>All the recipes</h1>
-            {/* <SearchBar /> */}
-        {/* /**display the props */ }
-        
-    
+        <> 
+        <div>            
+            <Recipe recipe={result} />            
+        </div>
         </>
-
-
     )
 
 }
