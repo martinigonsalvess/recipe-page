@@ -1,4 +1,5 @@
 import Recipe from './Recipe';
+import SearchBar from './SearchBar';
 
 
 
@@ -8,8 +9,7 @@ function ShowRecipes(){
         <div>
 
             <h1>All the recipes</h1>
-            <h2>test</h2>
-            
+            <SearchBar />
         </div>
         
     
