@@ -1,20 +1,21 @@
-// import React ,{ useState , useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import './RecipePage.css';
 import ShowRecipes from './ShowRecipes';
-// import Axios from 'axios';
+import Axios from 'axios';
 
 function RecipePage() {
-    // const[beef, setBeef] = useState("");
-    // const[ recipes, setRecipes ]= useState([]);
+    const [query, setQuery] = useState("fish");
+    const [recipes, setRecipes] = useState([]);
 
 
-    // const getBeef = ()=>{
-    //     Axios.get(`https://api.edamam.com/search?q=beef&app_id=439d148a&app_key=656b9f2c04daa032243be7bf3454c466`)
-    //     // Axios.get(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=vodka`)
-    //         .then(resp => {setBeef(resp.data)})
-    // };
-    // useEffect(() => {getBeef()},[])
+    const getBeef = () => {
+        Axios.get(`https://api.edamam.com/search?q=${query}&app_id=439d148a&app_key=656b9f2c04daa032243be7bf3454c466`)
+            .then(resp => setRecipes(resp.data.hits))
+            // .then(console.log(recipes))
 
+    };
+    useEffect(() => { getBeef() }, [])
+    console.log(recipes)
     return (
         <>
             <div className="container">
@@ -26,14 +27,14 @@ function RecipePage() {
                             <div className="single-box-beef">
                                 <div className="img-area"></div>
                                 <div className="img-text"></div>
-                           {/*   <button onClick={()=>e.target.value('vodka')}>*/}
+                                {/* <button onClick={()=>e.target.value.data}> */}
                                 <span className="header-text"><strong>Beef</strong></span>
-                            {/*  </button>*/}
+                                {/* </button> */}
                             </div>
-                                         {/*you should wrap the category between a button tag. 
+                            {/*you should wrap the category between a button tag. 
                                             onClick= make the api call depending 
                                             on the category and charge the state  */}
-                           
+
                             <div className="single-box-fish">
                                 <div className="img-area"></div>
                                 <div className="img-text"></div>
@@ -70,11 +71,12 @@ function RecipePage() {
 
 
                     <div className="main">
-                        {/* map to the state and display the ShowRecipes component and the state to him with the spread operator
+                        {/* map to the state and display the ShowRecipes component and pass the state to him with the spread operator
                         <ul>
                              {beef.map(results => <li>{results.label}</li>)}
                         </ul> */ }
-                        <ShowRecipes />
+
+                        {recipes.map(result => <ShowRecipes result={result} />)}                        
 
                         <div className="show-recipes"></div>
 
