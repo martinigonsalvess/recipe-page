@@ -2,10 +2,12 @@ import React, { useState, useEffect } from 'react';
 import './RecipePage.css';
 import ShowRecipes from './ShowRecipes';
 import Axios from 'axios';
+import Navbar from './NavBar';
 
 function RecipePage() {
     const [query, setQuery] = useState("");
     const [recipes, setRecipes] = useState([]);
+
 
 
     const getRecipes = () => {
@@ -17,6 +19,7 @@ function RecipePage() {
     console.log(recipes)
     return (
         <>
+        <Navbar />
             <div className="container">
                 <div className="flex-grid">
                     <aside className="sidebar-box-area">
@@ -69,10 +72,8 @@ function RecipePage() {
                         {/* map to the state and display the ShowRecipes component and pass the state to him with the spread operator
                        */ }
 
-                        {recipes.map(result => <ShowRecipes result={result} />)}                        
-
-
-
+                        {recipes.map(result => 
+                        <ShowRecipes result={result} />)}                   
 
                     </div>
 

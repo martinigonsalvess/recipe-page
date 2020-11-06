@@ -32,6 +32,10 @@
     color: #195C76;
     font-size: 1.3rem;
   }
+  h2:hover{
+    background-color:yellowgreen;
+
+  }
   
   .flex-grid {/*side bar text on images*/
     color: white;
@@ -68,15 +72,21 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 160px;
-    height: 160px;
+    /* width: 160px;
+    height: 160px; */
     height: 150px;
     width: 150px; 
     background-size: cover;
     border-radius: 15px;
     margin: 6px;
     position: relative;
+    transition: ease-in-out;
+  }  
+  .single-box-beef:hover,.single-box-fish:hover,.single-box-vegetables:hover,.single-box-fruit:hover,.single-box-pork:hover,.single-box-chicken:hover{
+    cursor: pointer;
+    border: 4px solid yellowgreen;
   }
+
   .single-box-beef{background-image: url('https://images.unsplash.com/photo-1546833160-1ae25ca1a6d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1287&q=80');}
   .single-box-fish{background-image: url('https://images.unsplash.com/photo-1575053516499-bf3ab5bf59e4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=675&q=80');}
   .single-box-vegetables{background-image: url('https://images.unsplash.com/photo-1546069901-d5bfd2cbfb1f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80');}
@@ -89,9 +99,13 @@
     width: 150px;
     text-align: center;
   }
-  .img-area:hover{
+  /* .header-text:hover{
+    background-color:yellowgreen;
+
+  } */
+  /* .img-area:hover{
     cursor: pointer;
-  }
+  } */
   .sidebar-box-area {
     flex: 1;
     background-color: white;

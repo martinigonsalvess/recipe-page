@@ -1,9 +1,10 @@
 import Axios from 'axios';
 import './SearchBar.css';
+import ShowRecipes from './ShowRecipes';
 import Alert from './Alert';
 import Recipe from './Recipe';
 import React, { useState } from 'react';
-import ShowRecipes from './ShowRecipes';
+
 
 function SearchBar(){
 /*API part */
@@ -57,11 +58,16 @@ const onSubmit =(e)=>{
         <input type="submit" value="search"/>
       </form>
 
+
+
       <div className="recipes">
-        {recipes !== [] && recipes.map(result =>
+        {recipes.map(result =>
           <ShowRecipes result={result} />
           )}
       </div>   
+
+
+
 
       {/* <div className="recipes">
         {recipes !== [] && recipes.map(recipe =>

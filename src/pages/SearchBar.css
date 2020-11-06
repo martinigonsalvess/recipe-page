@@ -84,6 +84,8 @@ h1 {
 }
 .search-form input[type="submit"]:hover{
   cursor: pointer;
+  background-color:yellowgreen;
+
 }
 
 .recipes {
@@ -155,7 +157,8 @@ h1 {
   height: 3rem;
 }
 .recipe button:hover{
-  background-color:red;
+  background-color:yellowgreen;
+  color:  #58641D;
   cursor: pointer;
 }
 
