@@ -51,12 +51,12 @@ const onSubmit =(e)=>{
 
                 
         <div className="App">
-      <div className="search-container">
-      <form className="search-form" onSubmit={onSubmit}>
-        { alert !== "" && <Alert alert={alert}/>}
-        <input type="text" placeholder="Search Food" autoComplete="off" onChange={onChange} value={query}/>
-        <input type="submit" value="search"/>
-      </form>
+          <div className="search-container">
+            <form className="search-form" onSubmit={onSubmit}>
+           { alert !== "" && <Alert alert={alert}/>}
+             <input type="text" placeholder="Search Food" autoComplete="off" onChange={onChange} value={query}/>
+              <input type="submit" value="search"/>
+             </form>
 
 
 
