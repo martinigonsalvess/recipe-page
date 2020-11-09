@@ -12,7 +12,7 @@
   position: absolute;
   top: -3rem;
   left: 0;
-  background-color: rgb(233, 72, 72);
+  /* background-color: rgb(233, 72, 72); */
   width: calc(100% - 0.4rem);
   border-radius: 15px;
   padding: 0.2rem;
@@ -152,14 +152,14 @@ h1 {
   font-size: 0.7rem;
   text-transform: uppercase;
   color: #fff;
-  background-color: #58641D;
+  background-color: #828282;
   border: none;
   border-radius: 0 0 15px 15px;
   height: 3rem;
 }
 .recipe button:hover{
   background-color:yellowgreen;
-  color:  #58641D;
+  color:  #828282;
   cursor: pointer;
 }
 

@@ -29,7 +29,6 @@ function RecipePage() {
           setQuery(search)
           setSearch("");
         };
-        // setSearch("");
 
 
     return (
