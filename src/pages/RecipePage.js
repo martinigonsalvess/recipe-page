@@ -27,8 +27,9 @@ function RecipePage() {
         const onSubmit =(e)=>{
           e.preventDefault();
           setQuery(search)
+          setSearch("");
         };
-
+        // setSearch("");
 
 
     return (
