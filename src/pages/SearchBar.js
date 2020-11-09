@@ -56,8 +56,9 @@ const onSubmit =(e)=>{
            { alert !== "" && <Alert alert={alert}/>}
              <input type="text" placeholder="Search Food" autoComplete="off" onChange={onChange} value={query}/>
               <input type="submit" value="search"/>
-             </form>
 
+             </form>
+          
 
 
       <div className="recipes">

@@ -41,6 +41,7 @@ function RecipePage() {
                   <input type="text" placeholder="Search Food" autoComplete="off" onChange={onChange} value={search}/>
                      <input type="submit" value="search"/>
              </form>
+             <Navbar/>
          </div>
 
         </div>
