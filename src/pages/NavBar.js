@@ -23,6 +23,19 @@ const Navbar = () => {
     <Nav>
       <div className="search-bar">
         {/* <SearchBar /> */}
+
+        {/* Route from K */}
+        <Header/>
+<Switch>
+<Route exact path='/' component={Home}></Route>
+<Route path='/Ingredients' component={IngredientsBtn}></Route>
+<Route path='/Recipe' component={RecipesBtn}></Route>
+<Route path='/Contact' component={Contact}></Route>
+</Switch>
+
+
+
+
       </div>
       <Burger />
     </Nav>
