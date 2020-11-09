@@ -4,6 +4,7 @@ import ShowRecipes from './ShowRecipes';
 import Axios from 'axios';
 import Navbar from './NavBar';
 import Alert from './Alert';
+import Burger from './Burger';
 
 
 function RecipePage() {
@@ -32,10 +33,8 @@ function RecipePage() {
 
     return (
         <>
-        {/* <Navbar /> */}
-
-
-        <div className="App">
+        {/* <div className="App"> */}
+        <div className="search-bar">
           <div className="search-container">
             <form className="search-form" onSubmit={onSubmit}>
                 { alert !== "" && <Alert alert={alert}/>}
@@ -43,7 +42,9 @@ function RecipePage() {
                      <input type="submit" value="search"/>
              </form>
          </div>
+
         </div>
+
         
 
             <div className="container">
