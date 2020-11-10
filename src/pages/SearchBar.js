@@ -1,4 +1,5 @@
 import Axios from 'axios';
+import './RecipePage.css';
 import './SearchBar.css';
 import ShowRecipes from './ShowRecipes';
 import Alert from './Alert';

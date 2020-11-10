@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './RecipePage.css';
+import './SearchBar.css';
 import ShowRecipes from './ShowRecipes';
 import Axios from 'axios';
 import Navbar from './NavBar';
@@ -43,10 +44,7 @@ function RecipePage() {
              </form>
              <Navbar/>
          </div>
-
-        </div>
-
-        
+        </div>        
 
             <div className="container">
                 <div className="flex-grid">
@@ -87,11 +85,8 @@ function RecipePage() {
                                 <div className="img-area"></div>
                                 <div className="img-text"></div>
                                 <span className="header-text"><strong>Chicken</strong></span>
-
                             </div>
                         </div>
-
-
                     </aside>
 
 

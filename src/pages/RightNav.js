@@ -1,5 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
+import Home from './Home';
+import Ingredients from './Ingredients';
+import Recipe from './RecipePage';
+import Contact from './Contact';
+import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import { Link } from 'react-router-dom';
+
+
 
 const Ul = styled.ul`
   list-style: none;
@@ -8,6 +16,10 @@ const Ul = styled.ul`
 
   li {
     padding: 18px 10px;
+    color: #fff;
+  }
+  li:hover{
+    color:yellowgreen;
   }
 
   @media (max-width: 768px) {
@@ -25,17 +37,23 @@ const Ul = styled.ul`
     li {
       color: #fff;
     }
+    li a:visited{
+      color: #fff;
+    }
   }
 `;
 
 const RightNav = ({ open }) => {
   return (
-    <Ul open={open}>
-      <li>Home</li>
-      <li>Ingredients</li>
-      <li>Recipe</li>
-      <li>Contact</li>
-    </Ul>
+
+   
+      <Ul open={open}>
+        <Link to="/app"><li>Home</li></Link>
+        <Link to="/ingredients"><li>Ingredients</li></Link>
+        <Link to="/recipe"><li>Recipe</li></Link>
+        <Link to="/contact"><li>Contact</li></Link>        
+      </Ul>
+   
   )
 }
 

@@ -1,15 +1,20 @@
 import React, {Component} from 'react';
+import './StylePage.css';
+import Navbar from './NavBar';
 
-class Home extends Component {
-    render() {
+function Home() {
+    
         return (
-         <div>
+          
+         <div className="home-page">    
+         <Navbar />     
              <p>
-             This is home
+              Home page
              </p>
+             <img src="/img/front-page-bg.jpg"/>
          </div>
         );
-      }
+      
     }
 
     export default Home
