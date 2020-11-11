@@ -8,6 +8,7 @@ import Recipe from './pages/RecipePage';
 import Contact from './pages/Contact';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import RecipePage from './pages/RecipePage';
+import './pages/StylePage.css';
 
 function App() {
   
@@ -15,13 +16,13 @@ function App() {
   return (
     <Router>
       <div className="App">
-      
+      {/* <Navbar /> */}
         {/*  <RecipePage />  */}    
          
           <Switch>
             <Route path="/" exact component={Home} />
             <Route path="/ingredients" component={Ingredients} />
-            <Route path="/recipe" component={RecipePage}/>
+            <Route path="/recipepage" component={RecipePage}/>
             <Route path="/contact" component={Contact} />         
           
           </Switch>

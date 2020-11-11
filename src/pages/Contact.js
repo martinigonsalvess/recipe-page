@@ -1,17 +1,33 @@
-import React, {Component} from 'react';
+import React from 'react';
 import Navbar from './NavBar';
+import Card from './ContactCardUI';
+import './StyleCard.scss';
+// import './StyleCard.css';
 
-class Contact extends Component {
-    render() {
+function Contact(){
+    
         return (
-         <div className="contact-page">
-         <Navbar />
-             <p>
-            This is contact page
-             </p>
+         <div classNameNameName="contact-page">
+                     <Navbar />    
+                     <Card/> 
+             
+         <div className="card-body">
+
+             <div classNameName="card-container">
+               <div className="card-item">
+               {/* <Card/>  */}
+               </div>
+
+
+            </div>
+            
+        </div>
+
+
+
          </div>
         );
-      }
+      
     }
 
     export default Contact
