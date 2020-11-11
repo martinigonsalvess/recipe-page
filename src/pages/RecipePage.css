@@ -5,16 +5,10 @@
     padding:0px;
     margin:0px;
     box-sizing: border-box;
-    
-}
-html{
-  overflow: hidden;
-
 }
 .search-container{
   display: flex;
   height: 55px;
-  /* margin-bottom: 10px; */
 }
 .recipe-navbar{
     width: 100%;
@@ -124,20 +118,20 @@ html{
   }   
   .main {
     flex: 3;
-    background-color:red;
+    background-color:white;
     border-left: 1px solid #D1CCCC;
     /* margin-left:0.5rem; */
     /* margin-right:0.5rem; */
     /* padding: 1rem; */
     height:100vh;
-    width: 100vw;
+    width: 100vh;
   }
 
 /*---------------RECIPE -----------------*/
 .recipes {
   flex: 3;
   height:100vh;
-  width: 100vw;
+  width: 100vh;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -147,7 +141,7 @@ html{
 
 .recipe {
 
-  min-width: 250px;
+  width: 250px;
   height: auto;
   margin: 15px;
   display: flex;
@@ -201,10 +195,8 @@ html{
   border: none;
   border-radius: 0 0 15px 15px;
   height: 3rem;
-  
 }
 .recipe button:hover{
-  /* transform: scale(0.9, 0.9); */
   background-color:yellowgreen;
   color:  #828282;
   cursor: pointer;

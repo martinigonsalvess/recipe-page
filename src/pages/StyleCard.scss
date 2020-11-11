@@ -1,5 +1,6 @@
 $black: #071011;
 $white: #fff;
+$grey:#828282;
 $red: tomato;
 $standard: 10px;
 $card-height: 450px;
@@ -12,12 +13,11 @@ $card-width: 300px;
   left: 0;
   height: 100vh;
   width: 100vw;
+  background: url("https://images.pexels.com/photos/4199098/pexels-photo-4199098.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  // background: url("https://images.unsplash.com/photo-1558538337-aab544368de8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
 
-  background: url("https://images.unsplash.com/photo-1447433589675-4aaa569f3e05?ixlib=rb-0.3.5&s=4222852e25e0f57d9485f7889957e99a&auto=format&fit=crop&w=2000&q=80");
   background-size: cover;
-  background: #ccc;
   background-position: 0 50%;
-  // background: #DEB493;
 
   &:after {
     content: "";
@@ -30,6 +30,12 @@ $card-width: 300px;
   }
 }
 
+// .text-center{
+//   background: chocolate;
+//   height: 100vh;
+  
+// }
+
 .outer-div,
 .inner-div {
   height: $card-height;
@@ -41,18 +47,22 @@ $card-width: 300px;
 .outer-div {
   perspective: 900px;
   perspective-origin: 50% calc(50% - 18em);
+  display: flex;
+  gap: 2em;
+  padding-top: 50px;
+  justify-content: center;
 }
 
 .inner-div {
   margin: $standard * 5 auto;
-
-  border-radius: 5px;
+  border-radius: 15px;
   font-weight: 400;
   color: $black;
   font-size: 1rem;
   text-align: center;
   transition: all 0.6s cubic-bezier(0.8, -0.4, 0.2, 1.7);
   transform-style: preserve-3d;
+  
 
   &:hover {
     transform: rotateY(180deg);
@@ -83,17 +93,23 @@ $card-width: 300px;
   height: 100%;
   background: $white;
   backface-visibility: hidden;
-  border-radius: 5px;
+  border-radius: 15px;
   box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3),
     0 0 40px rgba(0, 0, 0, 0.1) inset;
 }
+.front__bkg-photo1{background: url("https://images.unsplash.com/photo-1582979512210-99b6a53386f9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80")
+  no-repeat;}
+.front__bkg-photo2{background: url("https://images.unsplash.com/photo-1457296898342-cdd24585d095?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80")
+  no-repeat;}
+.front__bkg-photo3{background: url("https://images.unsplash.com/photo-1587815073078-f636169821e3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=675&q=80")
+  no-repeat;}
 
-.front__bkg-photo {
+.front__bkg-photo1,.front__bkg-photo2,.front__bkg-photo3 {
   position: relative;
   height: 150px;
   width: $card-width;
-  background: url("https://images.unsplash.com/photo-1511207538754-e8555f2bc187?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=88672068827eaeeab540f584b883cc66&auto=format&fit=crop&w=1164&q=80")
-    no-repeat;
+  // background: url("https://images.unsplash.com/photo-1511207538754-e8555f2bc187?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=88672068827eaeeab540f584b883cc66&auto=format&fit=crop&w=1164&q=80")
+  //   no-repeat;
   background-size: cover;
   backface-visibility: hidden;
   overflow: hidden;
@@ -137,12 +153,13 @@ $card-width: 300px;
 
   .front__text-header {
     font-weight: 700;
-    font-family: "Oswald";
+    font-family: "Montserrat";
     text-transform: uppercase;
     font-size: 20px;
   }
 
   .front__text-para {
+    padding-top: 15px;
     position: relative;
     top: -5px;
 
@@ -172,11 +189,13 @@ $card-width: 300px;
     text-transform: uppercase;
     letter-spacing: .4px;
 
-    border: 2px solid $red;
+    // border: 2px solid $grey;
     padding: 8px 15px;
-    border-radius: 30px;
+    border-radius: 15px;
+    width: 150px;
 
-    background: $red;
+
+    background: yellowgreen;
     color: $white;
   }
 }
@@ -189,7 +208,7 @@ $card-width: 300px;
   height: 100%;
   width: 100%;
   background-color: $black;
-  border-radius: 5px;
+  border-radius: 15px;
   display: flex;
   flex-direction: row;
   justify-content: center;
