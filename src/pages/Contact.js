@@ -3,6 +3,7 @@ import Navbar from './NavBar';
 import Card from './ContactCardUI';
 import './StyleCard.scss';
 // import './StyleCard.css';
+import './SearchBar.css';
 
 function Contact(){
     
