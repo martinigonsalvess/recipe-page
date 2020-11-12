@@ -49,6 +49,7 @@
     width: auto; 
     background-size: cover;
     margin-bottom: 20px;
+    margin-top: 6vh;
     /* position: relative; */
   }
 
@@ -65,10 +66,10 @@
     position: relative;
     transition: ease-in-out;
   }  
-  .single-box-beef1:hover,.single-box-fish1:hover,.single-box-vegetables1:hover,.single-box-fruit1:hover,.single-box-pork1:hover,.single-box-chicken1:hover{
+  /* .single-box-beef1:hover,.single-box-fish1:hover,.single-box-vegetables1:hover,.single-box-fruit1:hover,.single-box-pork1:hover,.single-box-chicken1:hover{
     cursor: pointer;
     border: 4px solid yellowgreen;
-  }
+  } */
 
   .single-box-beef1{background-image: url('https://images.unsplash.com/photo-1546833160-1ae25ca1a6d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1287&q=80');}
   .single-box-fish1{background-image: url('https://images.unsplash.com/photo-1575053516499-bf3ab5bf59e4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=675&q=80');}

@@ -54,6 +54,7 @@
     width: auto; 
     background-size: cover;
     margin-bottom: 20px;
+    margin-top: 6vh;
     /* position: relative; */
   }
   
@@ -140,6 +141,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
+  margin-top: 10vh;
 
 }
 

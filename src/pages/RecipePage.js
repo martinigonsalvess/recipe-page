@@ -84,10 +84,10 @@ function RecipePage() {
                                 <span className="header-text"><strong>Pork</strong></span>
 
                             </div>
-                            <div className="single-box-chicken" onClick={() => setQuery("chicken")}>
+                            <div className="single-box-chicken" onClick={() => setQuery("poultry")}>
                                 <div className="img-area"></div>
                                 <div className="img-text"></div>
-                                <span className="header-text"><strong>Chicken</strong></span>
+                                <span className="header-text"><strong>Poultry</strong></span>
                             </div>
                         </div>
                     </aside>

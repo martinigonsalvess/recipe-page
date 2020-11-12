@@ -54,7 +54,7 @@ const RightNav = ({ open }) => {
       <Ul open={open}>
         {/* <Link to="/home"><li>Home</li></Link> */}
         <Link to="/ingredients"><li>Ingredients</li></Link>
-        <Link to="/recipepage"><li>Recipe</li></Link>
+        <Link to="/recipepage"><li>Recipes</li></Link>
         <Link to="/contact"><li>Contact</li></Link>        
       </Ul>
    

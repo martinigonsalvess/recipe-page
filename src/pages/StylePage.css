@@ -67,7 +67,11 @@
     to   { opacity: 1; }
 }
 
-
+@media (max-width: 768px){
+    .front-btn{
+        font-size: 60px;
+    }
+}
 
 
 
