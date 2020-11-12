@@ -64,7 +64,7 @@ function RecipePage() {
                             <div className="single-box-fish" onClick={()=> setQuery("fish")}>
                                 <div className="img-area"></div>
                                 <div className="img-text"></div>
-                                <span className="header-text"><strong>Fish</strong></span>
+                                <span className="header-text"><strong>Seafood</strong></span>
                             </div>
                             <div className="single-box-vegetables" onClick={() => setQuery("vegetables")}>
                                 <div className="img-area"></div>

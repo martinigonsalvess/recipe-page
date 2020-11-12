@@ -6,6 +6,7 @@
     margin:0px;
     box-sizing: border-box;
 }
+
 .search-container{
   display: flex;
   height: 100%;
@@ -55,6 +56,14 @@
     margin-bottom: 20px;
     /* position: relative; */
   }
+  .top-image-sidebar1{
+    background-image: url('https://enjoythegoodlife.nl/wp-content/uploads/2018/04/SM%C3%98RREBR%C3%98D-header.jpg');
+    height: 200px;
+    width: auto; 
+    background-size: cover;
+    margin-bottom: 20px;
+    /* position: relative; */
+  }
   .category-text{
     color: #828282;
     font-size: 1.3rem;
@@ -80,9 +89,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    /* width: 160px;
-    height: 160px; */
-    height: 150px;
+    height: 100px;
     width: 150px; 
     background-size: cover;
     border-radius: 15px;
@@ -140,6 +147,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
+
 }
 
 .recipe {

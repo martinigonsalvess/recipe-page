@@ -5,6 +5,7 @@ import ShowRecipes from './ShowRecipes';
 import Axios from 'axios';
 import Alert from './Alert';
 import IngrBtns from './IngrBtns';
+import './IngBtns.css';
 const vegetables = ['tomato', 'turnip', 'sweet potato', 'onion', 'mushroom', 'shallot', 'pumpkin', 'chili', 'paprika', 'spring onion', 'peas', 'cucumber', 'courgette', 'cauliflower', 'carrot', 'broccoli', 'beetroot', 'cabbage', 'potato']
 const poultry = ['chicken wings', 'drumsticks', 'chicken breast', 'chicken thighs', 'duck', 'turkey']
 const pork = ['bacon', 'ham', 'pork fillet', 'pork ribs', 'pork loin', 'pork chops', 'minced pork', 'pork sausage']
@@ -72,7 +73,7 @@ function Ingredients() {
             <div className="container">
                 <div className="flex-grid">
                     <aside className="sidebar-box-area">
-                        <div className="top-image-sidebar"></div>
+                        <div className="top-image-sidebar1"></div>
                         <h2 className="category-text">Ingredient Categories</h2>
                         <div className="images-container">
                             <div>

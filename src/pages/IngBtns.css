@@ -1,0 +1,29 @@
+.isOnline {
+    background-color: green;
+  }
+  .isOffline {
+    background-color: grey;
+  }
+  .btndiv Button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 150px;
+    height: 30px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
+  .btndiv {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .r1div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }

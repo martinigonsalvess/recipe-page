@@ -22,6 +22,8 @@ $card-width: 300px;
   background-size: cover;
   background-position: 0 50%;
   filter:blur(5px);
+  background-attachment: fixed;
+
 
   &:after {
     content: "";
