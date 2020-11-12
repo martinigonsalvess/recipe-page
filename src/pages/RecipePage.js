@@ -5,7 +5,6 @@ import ShowRecipes from './ShowRecipes';
 import Axios from 'axios';
 import Navbar from './NavBar';
 import Alert from './Alert';
-import Burger from './Burger';
 
 
 function RecipePage() {
@@ -34,6 +33,8 @@ function RecipePage() {
 
     return (
         <>
+        {/*BEGIN SEARCH BAR */}      
+
         {/* <div className="App"> */}
         <div className="search-bar">
           <div className="search-container">
@@ -44,7 +45,9 @@ function RecipePage() {
              </form>
              <Navbar/>
          </div>
-        </div>        
+        </div>  
+
+        {/*END SEARCH BAR */}      
 
             <div className="container">
                 <div className="flex-grid">
