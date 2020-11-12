@@ -6,17 +6,19 @@ import Axios from 'axios';
 import Alert from './Alert';
 import IngrBtns from './IngrBtns';
 import './IngBtns.css';
+import './RecipePage.css';
+import './SearchBar.css';
 const vegetables = ['tomato', 'turnip', 'sweet potato', 'onion', 'mushroom', 'shallot', 'pumpkin', 'chili', 'paprika', 'spring onion', 'peas', 'cucumber', 'courgette', 'cauliflower', 'carrot', 'broccoli', 'beetroot', 'cabbage', 'potato']
 const poultry = ['chicken wings', 'drumsticks', 'chicken breast', 'chicken thighs', 'duck', 'turkey']
 const pork = ['bacon', 'ham', 'pork fillet', 'pork ribs', 'pork loin', 'pork chops', 'minced pork', 'pork sausage']
 const beef = ['minced beef', 'beef ribs', 'beef steak', 'beef patty']
-const seafood = ['salmon', 'tuna', 'shrimp','mackerel', 'prawn', 'trout', 'cod', 'scallop', 'mussels', 'lobster', 'crab']
+const seafood = ['salmon', 'tuna', 'shrimp','mackerel']
 const fruit = ['apple', 'kiwi', 'banana', 'blueberry', 'strawberry', 'mango', 'orange', 'pear', 'lemon', 'grapefruit', 'coconut', 'cherry', 'apricot', 'peach', 'plum', 'grape', 'pomegranate']
 // const dairy = ['gouda', 'feta', 'gruyere', 'brie', 'parmesan', 'blue cheese', 'cheddar', 'mozzarella', 'cottage cheese', 'yogurt', 'mascarpone', 'milk', 'buttermilk', 'butter', 'margarine', 'cream', 'cream fraiche', 'kefir', 'curd cheese', 'oat milk', 'whipped cream']
 // const sides = ['rice', 'oat', 'couscous', 'buckwheat', 'chickpeas', 'black-eyed pea', 'kidney beans', 'pasta', 'spaghetti', 'barley', 'brown peas', 'nuts']
 // const breads = ['white bread', 'sourdough bread', 'rye bread', 'whole wheat bread', 'pita', 'ciabatta', 'naan', 'whole grain bread', 'roll bread']
 function Ingredients() {
-    const [query, setQuery] = useState("");
+    const [query, setQuery] = useState("lunch");
     const [recipes, setRecipes] = useState([]);
     const [search, setSearch] = useState([]);
     const getRecipes = () => {
@@ -77,7 +79,7 @@ function Ingredients() {
                         <h2 className="category-text">Ingredient Categories</h2>
                         <div className="images-container">
                             <div>
-                                <div className="single-box-beef" onClick={() => setQuery("beef")}>
+                                <div className="single-box-beef1" onClick={() => setQuery("beef")}>
                                     <div className="img-area"></div>
                                     <div className="img-text"></div>
                                     <span className="header-text"><strong>Beef</strong></span>
@@ -88,7 +90,7 @@ function Ingredients() {
                             </div>
                             {/* onChange={(event) => setPrice(event.target.value)} */}
                             <div>
-                                <div className="single-box-fish" onClick={() => setQuery("fish")}>
+                                <div className="single-box-fish1" onClick={() => setQuery("fish")}>
                                     <div className="img-area"></div>
                                     <div className="img-text"></div>
                                     <span className="header-text"><strong>Seafood</strong></span>
@@ -98,7 +100,7 @@ function Ingredients() {
                                 ))}
                             </div>
                             <div>
-                                <div className="single-box-vegetables" onClick={() => setQuery("vegetables")}>
+                                <div className="single-box-vegetables1" onClick={() => setQuery("vegetables")}>
                                     <div className="img-area"></div>
                                     <div className="img-text"></div>
                                     <span className="header-text"><strong>Vegetables</strong></span>
@@ -108,7 +110,7 @@ function Ingredients() {
                                 ))}
                             </div>
                             <div>
-                                <div className="single-box-fruit" onClick={() => setQuery("fruit")}>
+                                <div className="single-box-fruit1" onClick={() => setQuery("fruit")}>
                                     <div className="img-area"></div>
                                     <div className="img-text"></div>
                                     <span className="header-text"><strong>Fruit</strong></span>
@@ -118,7 +120,7 @@ function Ingredients() {
                                 ))}
                             </div>
                             <div>
-                                <div className="single-box-pork" onClick={() => setQuery("pork")}>
+                                <div className="single-box-pork1" onClick={() => setQuery("pork")}>
                                     <div className="img-area"></div>
                                     <div className="img-text"></div>
                                     <span className="header-text"><strong>Pork</strong></span>
@@ -128,7 +130,7 @@ function Ingredients() {
                                 ))}
                             </div>
                             <div>
-                                <div className="single-box-chicken" onClick={() => setQuery("chicken")}>
+                                <div className="single-box-chicken1" onClick={() => setQuery("chicken")}>
                                     <div className="img-area"></div>
                                     <div className="img-text"></div>
                                     <span className="header-text"><strong>Poultry</strong></span>

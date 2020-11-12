@@ -8,7 +8,7 @@ import Alert from './Alert';
 
 
 function RecipePage() {
-    const [query, setQuery] = useState("");
+    const [query, setQuery] = useState("strawberry");
     const [recipes, setRecipes] = useState([]);
     const[ search, setSearch ] = useState("");
 

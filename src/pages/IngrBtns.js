@@ -20,7 +20,7 @@ return (
     <div className="btndiv">
         <div className="r1div">
             <button className={online? 'isOnline' : 'isOffline'} value={props.val} onClick={() => toggle(props.val)}>
-      {online ? `${props.val}SELECTED` : `${props.val}`}
+      {online ? `${props.val}` : `${props.val}`}
     </button>
         </div>
     </div>

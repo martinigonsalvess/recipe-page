@@ -56,14 +56,7 @@
     margin-bottom: 20px;
     /* position: relative; */
   }
-  .top-image-sidebar1{
-    background-image: url('https://enjoythegoodlife.nl/wp-content/uploads/2018/04/SM%C3%98RREBR%C3%98D-header.jpg');
-    height: 200px;
-    width: auto; 
-    background-size: cover;
-    margin-bottom: 20px;
-    /* position: relative; */
-  }
+  
   .category-text{
     color: #828282;
     font-size: 1.3rem;
@@ -83,13 +76,13 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
   }
   .single-box-beef,.single-box-fish,.single-box-vegetables,.single-box-fruit,.single-box-pork,.single-box-chicken{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100px;
+    height: 150px;
     width: 150px; 
     background-size: cover;
     border-radius: 15px;
@@ -235,3 +228,5 @@
   color: #40b48e;
   font-size: 1.3rem;
 } */
+
+
