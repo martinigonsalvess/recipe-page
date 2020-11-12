@@ -19,10 +19,9 @@ $card-width: 300px;
   height: 100vh;
   width: 100vw;
   background: url("https://images.pexels.com/photos/4199098/pexels-photo-4199098.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
-  // background: url("https://images.unsplash.com/photo-1558538337-aab544368de8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
-
   background-size: cover;
   background-position: 0 50%;
+  filter:blur(5px);
 
   &:after {
     content: "";
@@ -56,6 +55,7 @@ $card-width: 300px;
   gap: 2em;
   padding-top: 50px;
   justify-content: center;
+  
 }
 
 .inner-div {
@@ -67,6 +67,7 @@ $card-width: 300px;
   text-align: center;
   transition: all 0.6s cubic-bezier(0.8, -0.4, 0.2, 1.7);
   transform-style: preserve-3d;
+  
   
 
   &:hover {
@@ -113,8 +114,6 @@ $card-width: 300px;
   position: relative;
   height: 150px;
   width: $card-width;
-  // background: url("https://images.unsplash.com/photo-1511207538754-e8555f2bc187?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=88672068827eaeeab540f584b883cc66&auto=format&fit=crop&w=1164&q=80")
-  //   no-repeat;
   background-size: cover;
   backface-visibility: hidden;
   overflow: hidden;
@@ -140,7 +139,7 @@ $card-width: 300px;
   border-radius: 50%;
   border: 5px solid $white;
   background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQvYjYO3xERpB2X5_ijfxpHxMomqlbYTMP6Ag&usqp=CAU")
-    no-repeat;
+    no-repeat; 
   background-size: contain;
   backface-visibility: hidden;
   overflow: hidden;
@@ -198,10 +197,8 @@ $card-width: 300px;
     padding: 8px 15px;
     border-radius: 15px;
     width: 150px;
-
-
     background: yellowgreen;
-    color: $white;
+    color: $black;
   }
 }
 
@@ -259,4 +256,9 @@ $card-width: 300px;
 
 .fab:hover {
   top: -5px;
+}
+@media (max-width: 768px){
+  .outer-div{
+    flex-wrap: wrap;
+  }
 }

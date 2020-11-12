@@ -3,7 +3,7 @@ import './RecipePage.css';
 import './SearchBar.css';
 import ShowRecipes from './ShowRecipes';
 import Alert from './Alert';
-import Recipe from './Recipe';
+// import Recipe from './Recipe';
 import React, { useState } from 'react';
 
 

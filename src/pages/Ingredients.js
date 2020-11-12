@@ -1,57 +1,153 @@
 import React, { useState, useEffect } from 'react';
-import './RecipePage.css';
-import './SearchBar.css';
-// import ShowRecipes from './ShowRecipes';
-import Axios from 'axios';
 import Navbar from './NavBar';
-// import Alert from './Alert';
-
+// import './RecipePage.css';
+import ShowRecipes from './ShowRecipes';
+import Axios from 'axios';
+import Alert from './Alert';
+import IngrBtns from './IngrBtns';
+const vegetables = ['tomato', 'turnip', 'sweet potato', 'onion', 'mushroom', 'shallot', 'pumpkin', 'chili', 'paprika', 'spring onion', 'peas', 'cucumber', 'courgette', 'cauliflower', 'carrot', 'broccoli', 'beetroot', 'cabbage', 'potato']
+const poultry = ['chicken wings', 'drumsticks', 'chicken breast', 'chicken thighs', 'duck', 'turkey']
+const pork = ['bacon', 'ham', 'pork fillet', 'pork ribs', 'pork loin', 'pork chops', 'minced pork', 'pork sausage']
+const beef = ['minced beef', 'beef ribs', 'beef steak', 'beef patty']
+const seafood = ['salmon', 'tuna', 'shrimp','mackerel', 'prawn', 'trout', 'cod', 'scallop', 'mussels', 'lobster', 'crab']
+const fruit = ['apple', 'kiwi', 'banana', 'blueberry', 'strawberry', 'mango', 'orange', 'pear', 'lemon', 'grapefruit', 'coconut', 'cherry', 'apricot', 'peach', 'plum', 'grape', 'pomegranate']
+// const dairy = ['gouda', 'feta', 'gruyere', 'brie', 'parmesan', 'blue cheese', 'cheddar', 'mozzarella', 'cottage cheese', 'yogurt', 'mascarpone', 'milk', 'buttermilk', 'butter', 'margarine', 'cream', 'cream fraiche', 'kefir', 'curd cheese', 'oat milk', 'whipped cream']
+// const sides = ['rice', 'oat', 'couscous', 'buckwheat', 'chickpeas', 'black-eyed pea', 'kidney beans', 'pasta', 'spaghetti', 'barley', 'brown peas', 'nuts']
+// const breads = ['white bread', 'sourdough bread', 'rye bread', 'whole wheat bread', 'pita', 'ciabatta', 'naan', 'whole grain bread', 'roll bread']
 function Ingredients() {
     const [query, setQuery] = useState("");
     const [recipes, setRecipes] = useState([]);
-    const [search, setSearch] = useState("");
-
+    const [search, setSearch] = useState([]);
     const getRecipes = () => {
         Axios.get(`https://api.edamam.com/search?q=${query}&app_id=439d148a&app_key=656b9f2c04daa032243be7bf3454c466`)
             .then(resp => setRecipes(resp.data.hits))
-
     };
     useEffect(() => { getRecipes() }, [query])
-    console.log(recipes)
-
     const onChange = (e) => {
         setSearch(e.target.value);
     };
-
     const onSubmit = (e) => {
         e.preventDefault();
         setQuery(search)
-        setSearch("");
     };
-
-
-
+    const getValueFromChild = (valueFromChild) => {
+        //  setSearch(valueFromChild.concat("?" + search))
+        switch (valueFromChild) {
+            // case !search.includes(valueFromChild):
+            //     setSearch(valueFromChild)
+            //     break;
+            case search.includes(valueFromChild):
+                setSearch((search.replace(valueFromChild, "")));
+                break;
+            default:
+                console.log("THIS IS SEARCH: " + search);
+                setSearch(valueFromChild)
+        }
+        // if (search.includes(valueFromChild)){
+        //     setSearch((search.replace(valueFromChild, "")))
+        //     // console.log(typeof(search));
+        //     console.log("SEARCH: " +search)
+        //     console.log("IF STATEMENT WAS PROCCED");
+        // } else{
+        //     setSearch(valueFromChild)
+        //     // console.log("this is valueFromChild: "+ valueFromChild);
+        //     console.log(search);
+        //     console.log("ELSE STATEMENT WAS PROCCED");
+        // }
+    }
     return (
-        <div className="ingredients-page">
-            {/*BEGIN SEARCH BAR */}
-
+        <>
             {/* <div className="App"> */}
             <div className="search-bar">
                 <div className="search-container">
                     <form className="search-form" onSubmit={onSubmit}>
-                        {/* { alert !== "" && <Alert alert={alert}/>} */}
+                        {alert !== "" && <Alert alert={alert} />}
                         <input type="text" placeholder="Search Food" autoComplete="off" onChange={onChange} value={search} />
                         <input type="submit" value="search" />
                     </form>
-                    <Navbar />
+                    <Navbar/>
+
                 </div>
             </div>
-
-            {/*END SEARCH BAR */}
-
-        </div>
+            <div className="container">
+                <div className="flex-grid">
+                    <aside className="sidebar-box-area">
+                        <div className="top-image-sidebar"></div>
+                        <h2 className="category-text">Ingredient Categories</h2>
+                        <div className="images-container">
+                            <div>
+                                <div className="single-box-beef" onClick={() => setQuery("beef")}>
+                                    <div className="img-area"></div>
+                                    <div className="img-text"></div>
+                                    <span className="header-text"><strong>Beef</strong></span>
+                                </div>
+                                {beef.map((elem) => (
+                                    <IngrBtns val={elem} setSearch={setSearch} search={search} handlePassInfoToParent={getValueFromChild} />
+                                ))}
+                            </div>
+                            {/* onChange={(event) => setPrice(event.target.value)} */}
+                            <div>
+                                <div className="single-box-fish" onClick={() => setQuery("fish")}>
+                                    <div className="img-area"></div>
+                                    <div className="img-text"></div>
+                                    <span className="header-text"><strong>Seafood</strong></span>
+                                </div>
+                                {seafood.map((elem) => (
+                                    <IngrBtns val={elem} setSearch={setSearch} search={search} handlePassInfoToParent={getValueFromChild} />
+                                ))}
+                            </div>
+                            <div>
+                                <div className="single-box-vegetables" onClick={() => setQuery("vegetables")}>
+                                    <div className="img-area"></div>
+                                    <div className="img-text"></div>
+                                    <span className="header-text"><strong>Vegetables</strong></span>
+                                </div>
+                                {vegetables.map((elem) => (
+                                    <IngrBtns val={elem} setSearch={setSearch} search={search} handlePassInfoToParent={getValueFromChild} />
+                                ))}
+                            </div>
+                            <div>
+                                <div className="single-box-fruit" onClick={() => setQuery("fruit")}>
+                                    <div className="img-area"></div>
+                                    <div className="img-text"></div>
+                                    <span className="header-text"><strong>Fruit</strong></span>
+                                </div>
+                                {fruit.map((elem) => (
+                                    <IngrBtns val={elem} setSearch={setSearch} search={search} handlePassInfoToParent={getValueFromChild} />
+                                ))}
+                            </div>
+                            <div>
+                                <div className="single-box-pork" onClick={() => setQuery("pork")}>
+                                    <div className="img-area"></div>
+                                    <div className="img-text"></div>
+                                    <span className="header-text"><strong>Pork</strong></span>
+                                </div>
+                                {pork.map((elem) => (
+                                    <IngrBtns val={elem} setSearch={setSearch} search={search} handlePassInfoToParent={getValueFromChild} />
+                                ))}
+                            </div>
+                            <div>
+                                <div className="single-box-chicken" onClick={() => setQuery("chicken")}>
+                                    <div className="img-area"></div>
+                                    <div className="img-text"></div>
+                                    <span className="header-text"><strong>Poultry</strong></span>
+                                </div>
+                                {poultry.map((elem) => (
+                                    <IngrBtns val={elem} setSearch={setSearch} search={search} handlePassInfoToParent={getValueFromChild} />
+                                ))}
+                            </div>
+                        </div>
+                    </aside>
+                    {/* <div className="main"> */}
+                    <div className="recipes">
+                        {/* map to the state and display the ShowRecipes component and pass the state to him with the spread operator
+                           */ }
+                        {recipes.map(result =>
+                            <ShowRecipes result={result} />)}
+                    </div>
+                </div>
+            </div>
+        </>
     );
-
 }
-
 export default Ingredients
