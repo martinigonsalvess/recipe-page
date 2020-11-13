@@ -232,3 +232,14 @@
 } */
 
 
+@media (max-width: 768px){
+  .search-form {
+    min-width: 350px;
+  }
+  .search-container{
+    display: flex;
+    /* min-width: 350px; */
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+}
