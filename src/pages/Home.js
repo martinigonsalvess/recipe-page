@@ -1,8 +1,8 @@
-import React, {Component} from 'react';
+import React from 'react';
 import './StylePage.css';
-import Navbar from './NavBar';
+// import Navbar from './NavBar';
 import FrontBtns from './FrontBtns';
-import { NavLink } from 'react-router-dom'
+// import { NavLink } from 'react-router-dom'
 
 
 
